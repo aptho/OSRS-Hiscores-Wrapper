@@ -2,7 +2,7 @@
 
 ### Stats: `/v1/stats/{username}?mode={mode}`
 
-- name: player name
+- username: player name
 
 - mode: game mode (optional)
     - hiscore_oldschool
