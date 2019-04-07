@@ -32,4 +32,4 @@ const MOCK_RESPONSE = `8471,2239,344353407
 15806,20
 39238,500`
 
-module.exports.rawResonse = MOCK_RESPONSE
+module.exports.response = MOCK_RESPONSE
