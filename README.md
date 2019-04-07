@@ -1,15 +1,26 @@
 # OSRS API wrapper
 
-## How to use
+## How to get an account object:
 ```
 const HiscoresApi = require('osrs-hiscores-api')
 
 HiscoresApi.getStats('name', 'gamemode').then(res => {
     // getStats returns a promise
-    // so we either need .then
-    // or to use an async function
+    // which resolves to a new Account() object
 })
 ```
+
+## The account object:
+
+### Methods:
+- `getLevel(skillname)`
+    - Parameters:
+        - skillname (required): string
+    - Return value: int
+- `getCombatLevel(rounded)`
+    - Parameters:
+        - rounded (optional): bool
+    - Return value: int|string
 
 ## Local API:
 This repository uses [node express](https://expressjs.com/) to generate an api to fetch OSRS user stats

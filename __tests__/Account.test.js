@@ -11,12 +11,6 @@ describe('Account tests', () => {
     })
   })
 
-  it('should return 0 remaining experience when skill is level 99', () => {
-    const account = new Account(mocks.response)
-    const remaining = account.getExperienceToNextLevel(99, 13034431)
-    expect(remaining).toBe(0)
-  })
-
   it('should calculate combat level correctly', () => {
     const account = new Account(mocks.response)
 
@@ -27,5 +21,21 @@ describe('Account tests', () => {
     const minLevel = account.calculateCombat(10, 1, 1, 1, 1, 1, 1)
     expect(minLevel.level).toBe(3)
     expect(minLevel.actualLevel).toBe('3.4')
+  })
+
+  it('should return the correct level', () => {
+    const account = new Account(mocks.response)
+    const level = account.getLevel('attack')
+    expect(level).toBe(99)
+  })
+
+  it('should return the correct combat level', () => {
+    const account = new Account(mocks.response)
+    
+    const combatLevel = account.getCombatLevel()
+    expect(combatLevel).toBe(126)
+
+    const combatLevelRounded = account.getCombatLevel(false)
+    expect(combatLevelRounded).toBe('126.1')
   })
 })
