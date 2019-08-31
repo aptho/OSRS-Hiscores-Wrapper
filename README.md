@@ -9,6 +9,15 @@ Hiscores.getStats('name', 'gamemode').then(res => {
 })
 ```
 
+### Gamemode values:
+- hiscore_oldschool
+- hiscore_oldschool_ironman
+- hiscore_oldschool_ultimate
+- hiscore_oldschool_hardcore_ironman
+- hiscore_oldschool_deadman
+- hiscore_oldschool_seasonal
+- hiscore_oldschool_tournament
+
 ## Account object:
 
 ### Methods:
