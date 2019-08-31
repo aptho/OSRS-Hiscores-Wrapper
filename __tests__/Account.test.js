@@ -16,11 +16,11 @@ describe('Account tests', () => {
 
     const maxLevel = account.calculateCombat(99, 99, 99, 99, 99, 99, 99)
     expect(maxLevel.level).toBe(126)
-    expect(maxLevel.actualLevel).toBe('126.1')
+    expect(maxLevel.actualLevel).toBe(126.1)
 
     const minLevel = account.calculateCombat(10, 1, 1, 1, 1, 1, 1)
     expect(minLevel.level).toBe(3)
-    expect(minLevel.actualLevel).toBe('3.4')
+    expect(minLevel.actualLevel).toBe(3.4)
   })
 
   it('should return the correct level', () => {
@@ -36,6 +36,6 @@ describe('Account tests', () => {
     expect(combatLevel).toBe(126)
 
     const combatLevelRounded = account.getCombatLevel(false)
-    expect(combatLevelRounded).toBe('126.1')
+    expect(combatLevelRounded).toBe(126.1)
   })
 })

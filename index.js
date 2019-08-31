@@ -1,3 +1,3 @@
-const HiscoresApi = require('./lib/HiscoresApi')
+const Hiscores = require('./lib/Hiscores')
 
-module.exports = new HiscoresApi()
+module.exports = new Hiscores()
