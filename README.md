@@ -2,7 +2,7 @@
 
 ## Typical usage:
 ```
-const Hiscores = require('osrs-hiscores-api')
+const Hiscores = require('osrs-hiscores-wrapper')
 
 Hiscores.getStats('name', 'gamemode').then(res => {
   const attack = res.getLevel('attack')
